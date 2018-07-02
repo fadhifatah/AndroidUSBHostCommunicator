@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">USB Host Communicator</string>
+    <string name="check_your_device">Check your device!</string>
+    <string name="get_attached_device">Get attached devices</string>
+</resources>
