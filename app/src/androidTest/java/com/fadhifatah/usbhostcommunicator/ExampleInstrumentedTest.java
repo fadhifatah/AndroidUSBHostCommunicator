@@ -1,4 +1,4 @@
-package com.fadhifatah.protoadvanceddevice;
+package com.fadhifatah.usbhostcommunicator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

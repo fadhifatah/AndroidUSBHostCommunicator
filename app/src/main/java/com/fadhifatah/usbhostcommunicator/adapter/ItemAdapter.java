@@ -1,5 +1,6 @@
 package com.fadhifatah.usbhostcommunicator.adapter;
 
+import android.content.Intent;
 import android.hardware.usb.UsbDevice;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.fadhifatah.usbhostcommunicator.DeviceActivity;
 import com.fadhifatah.usbhostcommunicator.R;
 
 import java.util.List;
@@ -38,6 +40,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
             @Override
             public void onClick(View view) {
 //                Communicate with it
+                Intent intent = new Intent(view.getContext(), DeviceActivity.class);
+                intent.putExtra("Device", device);
+                view.getContext().startActivity(intent);
             }
         });
     }

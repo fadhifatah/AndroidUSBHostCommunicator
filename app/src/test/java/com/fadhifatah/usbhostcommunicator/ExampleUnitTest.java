@@ -1,4 +1,4 @@
-package com.fadhifatah.protoadvanceddevice;
+package com.fadhifatah.usbhostcommunicator;
 
 import org.junit.Test;
 
