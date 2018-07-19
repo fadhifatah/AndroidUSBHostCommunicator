@@ -10,14 +10,13 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.fadhifatah.usbhostcommunicator.DeviceActivity;
+import com.fadhifatah.usbhostcommunicator.activity.DeviceActivity;
 import com.fadhifatah.usbhostcommunicator.R;
 
 import java.util.List;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
 
-    private static final String ACTION_USB_PERMISSION = "com.android.example.USB_PERMISSION";
     private List<UsbDevice> usbDeviceList;
 
     public ItemAdapter(List<UsbDevice> usbDeviceList) {
@@ -34,8 +33,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
     public void onBindViewHolder(@NonNull ItemAdapter.ItemHolder holder, int position) {
         final UsbDevice device = usbDeviceList.get(position);
 
-        String s = device.getDeviceName() + " - ";
-        holder.textView.setText(device.getDeviceName());
+        String s = device.getDeviceName() + " - " + device.getProductName() + " - " + device.getManufacturerName() + " - " + device.getSerialNumber();
+        holder.textView.setText(s);
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

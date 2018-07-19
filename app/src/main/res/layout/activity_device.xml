@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fadhifatah.usbhostcommunicator.DeviceActivity">
+    tools:context="com.fadhifatah.usbhostcommunicator.activity.DeviceActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -45,6 +45,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/send_message"
             android:layout_margin="8dp"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:padding="8dp"
+            android:background="@color/colorAccent"/>
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

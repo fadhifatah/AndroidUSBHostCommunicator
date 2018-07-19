@@ -1,6 +1,7 @@
-package com.fadhifatah.usbhostcommunicator;
+package com.fadhifatah.usbhostcommunicator.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbManager;
@@ -13,7 +14,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.fadhifatah.usbhostcommunicator.R;
 import com.fadhifatah.usbhostcommunicator.adapter.ItemAdapter;
+import com.fadhifatah.usbhostcommunicator.service.UsbHostService;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+
+        startService(new Intent(getApplicationContext(), UsbHostService.class));
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
